@@ -1,0 +1,46 @@
+{
+  "wishlist": [
+    {
+      "wishlist_id": "",
+      "wishlist_name": "",
+      "wishlist_description": "",
+      "wishlist_owner": "",
+      "wishlist_items": [
+        {
+          "item_id": "",
+          "item_name": "",
+          "item_description": "",
+          "item_price": "",
+          "item_image": "",
+          "item_link": ""
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "user_id": "",
+      "user_name": "",
+      "user_email": "",
+      "user_password": "",
+      "user_wishlistId": "",
+      "user_amount": ""
+    }
+  ],
+  "orders": [
+    {
+      "order_id": "",
+      "order_userId": "",
+      "order_items": [
+        {
+          "item_id": "",
+          "item_name": "",
+          "item_description": "",
+          "item_price": "",
+          "item_image": "",
+          "item_link": ""
+        }
+      ]
+    }
+  ]
+}
