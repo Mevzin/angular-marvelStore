@@ -5,21 +5,26 @@
   width: 100%;
 }
 
-.cardContainer{
+.cardContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: white;
   width: 210px;
   height: 400px;
   margin: auto 0;
   margin: 1rem;
-  border-radius: 10px;
+  color: white;
+  background: linear-gradient(
+    137.48deg,
+    rgba(255, 83, 188, 0.3) 15.13%,
+    rgba(10, 252, 212, 0.3) 87.01%
+  );
+  border-radius: 5px;
 
   img {
     margin: 0.5rem 0;
     width: 95%;
-    border-radius: 10px;
+    border-radius: 0.2rem;
     object-fit: cover;
   }
 
@@ -32,8 +37,11 @@
   }
 
   button {
-    width: 100px;
+    width: 90px;
     height: 35px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
   }
 }
 
@@ -42,4 +50,23 @@
   justify-content: row;
   margin-top: auto;
   margin-bottom: 0.4rem;
+}
+
+.moreDetails {
+  border: 3px solid rgb(143, 143, 147);
+  background: linear-gradient(
+    137.48deg,
+    rgba(10, 252, 212, 0.15) 15.13%,
+    rgba(255, 83, 188, 0.15) 87.01%
+  );
+}
+
+.buy {
+  margin-left: 0.8rem;
+  border: 3px solid rgb(143, 143, 147);
+  background: linear-gradient(
+    137.48deg,
+    rgba(10, 252, 212, 0.15) 15.13%,
+    rgba(255, 83, 188, 0.15) 87.01%
+  );
 }
