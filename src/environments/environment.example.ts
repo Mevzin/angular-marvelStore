@@ -1,3 +1,6 @@
+export const environment = {
+  production: false
+};
 
 export const LOCAL_API_URL = '';
 

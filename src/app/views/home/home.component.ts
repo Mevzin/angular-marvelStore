@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MarvelService } from 'src/app/services/marvel.service';
-import { MARVEL_API_KEY } from 'src/environments/environment.prod';
+
+
+
+var setOffset = 0;
 
 export interface ResultsComics {
   id: number;
@@ -23,6 +26,8 @@ export interface ResultsComics {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
+
+
 export class HomeComponent implements OnInit {
   allComics: ResultsComics[];
 
@@ -32,12 +37,24 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllComicsList();
+
+    window.addEventListener('scroll', () => {
+      const {
+        scrollTop,
+        scrollHeight,
+        clientHeight
+      } = document.documentElement;
+
+      if(clientHeight + scrollTop >= scrollHeight) {
+        // show the loading animation
+        this.loadMoreComics();
+      }
+    });
   }
 
   async getAllComicsList() {
-    this.marvelApi.getAllComics()
+    this.marvelApi.getAllComics(setOffset)
     .subscribe((post) => {
-      console.log(post.data.results);
       this.allComics = post.data.results;
     });
   }
@@ -45,4 +62,15 @@ export class HomeComponent implements OnInit {
   checked() {
     console.log("checked");
   }
+
+  loadMoreComics(){
+    setOffset += 21;
+    this.marvelApi
+      .getAllComics(setOffset)
+      .subscribe((post) => {
+        this.allComics = this.allComics.concat(post.data.results);
+      });
+  }
+
 }
+
