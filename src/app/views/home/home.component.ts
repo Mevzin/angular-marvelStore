@@ -43,7 +43,6 @@ export class HomeComponent implements OnInit {
 
       if (clientHeight + scrollTop >= scrollHeight - 5) {
         this.loadMoreComics();
-        console.log("scroll")
       }
     });
   }
