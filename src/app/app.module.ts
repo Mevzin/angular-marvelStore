@@ -9,7 +9,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSliderModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatCheckboxModule
-
+    MatCheckboxModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

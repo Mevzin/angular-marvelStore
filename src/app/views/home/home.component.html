@@ -1,14 +1,25 @@
-<div class="container" >
-  <div class="cardContainer" *ngFor="let comic of allComics">
-    <img src={{comic.thumbnail.path}}.{{comic.thumbnail.extension}} >
-    <h1>{{comic.title}}</h1>
-    <div class="buttons">
-      <button class="moreDetails">
-        Detalhes
-      </button>
-      <button class="buy">
-        Comprar
-      </button>
+
+  <div
+  class="progress"
+  *ngIf="loadingComics"
+  >
+  <div>
+    <mat-progress-spinner
+      color="black"
+      mode="indeterminate"
+    >
+    </mat-progress-spinner>
+  </div>
+  </div>
+<div class="container">
+  <div class="content">
+    <div class="cardContainer" *ngFor="let comic of allComics">
+      <img src="{{ comic.thumbnail.path }}.{{ comic.thumbnail.extension }}" />
+      <h1>{{ comic.title }}</h1>
+      <div class="buttons">
+        <button class="moreDetails">Detalhes</button>
+        <button class="buy">Comprar</button>
+      </div>
     </div>
   </div>
 </div>
